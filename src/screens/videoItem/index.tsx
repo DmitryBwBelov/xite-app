@@ -30,6 +30,7 @@ const VideoItemComponent = React.memo<Props>(({route}) => {
     return (
         <MainWrap>
             <ImageWrap
+                testID="test_video_item_image"
                 $width={width}
                 $isLandscape={deviceOrientation?.landscape}
                 source={{uri: image_url}}

@@ -39,8 +39,6 @@ export const videosListReducer = (
                 const {query, year, tags} = filters;
                 let items = [...state.items];
 
-                console.log(filters);
-
                 if (query) {
                     items = items.filter(
                         ({artist, title}) =>

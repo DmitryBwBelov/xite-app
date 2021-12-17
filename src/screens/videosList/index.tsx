@@ -51,6 +51,7 @@ const VideosListComponent = React.memo<VideosListType>(
                 <MainWrap>
                     <Filter />
                     <FlatList
+                        testID="test_flat_list"
                         key={deviceOrientation?.portrait ? 'p' : 'h'}
                         data={items}
                         renderItem={renderItem}

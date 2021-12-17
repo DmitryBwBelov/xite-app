@@ -45,3 +45,8 @@ export const FilterButton = styled(Button)`
 export const SearchWrap = styled(Select)`
     margin: 5px 0;
 `;
+
+export const SearchInputWrap = styled.TextInput`
+    background: #fff;
+    padding: 10px 5px;
+`;

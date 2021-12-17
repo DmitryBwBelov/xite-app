@@ -6,6 +6,7 @@ import {genresListState} from '@states/genresList';
 import {GenreType} from '@interfaces/Genre.type';
 import {ActionType} from '@interfaces/Action.type';
 import {StateType} from '@interfaces/State.type';
+import {PayloadSearchInterface} from '@interfaces/videosList/PayloadSearch.type';
 // Enums
 import {StatusEnum} from '@enums/Status.enum';
 import {GenresListEnum} from '@enums/actions/GenresList.enum';
@@ -14,7 +15,7 @@ export const genresListReducer = (
     state = genresListState,
     {payload, type}: ActionType<GenreType[]>,
 ) =>
-    produce(state, (draft: StateType<GenreType[]>) => {
+    produce(state, (draft: StateType<GenreType[], PayloadSearchInterface>) => {
         switch (type) {
             case GenresListEnum.FETCH_GENRES_LIST_SUCCESS:
                 draft.items = payload as GenreType[];
